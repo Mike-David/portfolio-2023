@@ -4,14 +4,19 @@ import Header from './Header';
 import Banner from './Banner';
 import About from './About';
 import Home from './Home';
+import Main from './Main';
+import Footer from './Footer';
 
 function App() {
   return (
        <Router>
         <Home />
+        <About /> 
+        <Main />
+        <Footer />
         {/* <Banner />
          <Header />
-         <About /> */}
+         */}
          {/* Your other components and routes go here */}
        </Router>
   );
