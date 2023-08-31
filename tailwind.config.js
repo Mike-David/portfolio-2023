@@ -3,7 +3,9 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      
+    },
   },
   plugins: [
     require('@tailwindcss/aspect-ratio'),
