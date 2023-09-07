@@ -299,3 +299,23 @@
     font-weight: 600;
     font-size: 2vh;
 }
+
+/* work info */ 
+.work__info {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-column-gap: 1.5em;
+  padding: 1.25em 0;
+  border-bottom: 1px solid rgba(17,20,20,.1);
+}
+
+.button__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  content: "";
+  border-radius: 50%;
+}

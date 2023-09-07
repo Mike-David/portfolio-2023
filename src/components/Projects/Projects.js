@@ -31,7 +31,7 @@ function Projects() {
                         <img src={INH} />
                     </div>
                     <div className="text__box--three">
-                    <Link to="/insertnamehere">
+                    <Link to="/insertNameHere/InsertNameHere">
                         <h2 className="project_text">INH Hair</h2>
                     </Link>
                     </div>

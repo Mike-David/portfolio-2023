@@ -1,26 +1,34 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Route, Link, Outlet, RouterProvider } from 'react-router-dom';
+import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
-import Services from './components/Services/Services';
-import ImageGallery from './components/ImageGallery/ImageGallery';
 import Projects from './components/Projects/Projects';
-import FooterNav from './components/Footer/Footer';
 import InsertNameHere from './components/InsertNameHere/InsertNameHere';
+import FooterNav from './components/Footer/Footer';
 
 
-function App() {
-  return (
-       <Router>
-        
-          <Home />
-          <ImageGallery />
-          <Services />
-          <Projects />
-          <FooterNav />
-          <Routes>
-            <Route path="/insertnamehere" element={<InsertNameHere />} />
-          </Routes>
-       </Router>
-  );
+function App(props) {
+
+  // way to Create Routes using the component tree structure 
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Root />}>
+          <Route index element={<Home />} />
+          <Route path="projects" element={<Projects />} /> 
+          <Route path="insertNameHere/InsertNameHere" element={<InsertNameHere />} />    
+      </Route>
+    )
+  )
+  return (<RouterProvider router={router}/>);
+}
+//structure everthing to your routing that isnt finding routes - can put navbar system 
+const Root = () => {
+  return <>
+    <div>
+      <Navigation />
+      <Outlet />
+      <FooterNav />
+    </div>
+    </>
 }
 export default App;

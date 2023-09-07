@@ -1,21 +1,19 @@
 import React from 'react';
-import Navigation from '../Navigation/Navigation';
+import Hero from '../Hero/Hero';
+import Services from '../Services/Services';
+import ImageGallery from '../ImageGallery/ImageGallery';
+import Projects from '../Projects/Projects';
 
 
-function Hero() {
+function Home() {
     return (
     <section>
-        <div className="grid ">
-        <Navigation />
-            {/* <!-- text --> */}
-            <div className="flex flex-col m-auto h-[85vh] justify-center">
-                <h2 className="homepage-text">Hello, I'm Mike.</h2>
-                <h2 className="homepage-text">Developer and designer for a</h2>
-                <h2 className="homepage-text">digital-first world<span class="text-[#01ac6a]">.</span></h2>
-            </div>
-        </div>
+        <Hero />
+        <ImageGallery />
+        <Services />
+        <Projects />
     </section>
     )
 }
 
-export default Hero;
+export default Home;
